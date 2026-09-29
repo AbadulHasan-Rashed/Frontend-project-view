@@ -1,0 +1,4 @@
+.cta { background: var(--paper-100); padding: 90px 0; border-top: 1px solid var(--line); }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+.cta h2 { font-size: clamp(26px, 3.6vw, 38px); margin: 0; max-width: 14ch; line-height: 1.1; }
+.cta-actions { display: flex; gap: 14px; flex-wrap: wrap; }

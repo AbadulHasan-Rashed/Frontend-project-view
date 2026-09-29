@@ -1,0 +1,119 @@
+:root {
+  --navy-950: #0e1720;
+  --navy-900: #132330;
+  --navy-800: #1b3040;
+  --amber-500: #e8a33d;
+  --amber-400: #f0b65c;
+  --clay-500: #c1613d;
+  --clay-600: #a44f30;
+  --teal-500: #4f7c82;
+  --teal-300: #8fb8bc;
+  --paper-100: #f5efe1;
+  --paper-200: #ece3ce;
+  --ink-900: #20201c;
+  --ink-600: #54524a;
+  --line: #d9cfb7;
+  --white: #ffffff;
+
+  --font-display: 'Archivo', sans-serif;
+  --font-ui: 'Archivo', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper-100);
+  color: var(--ink-900);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (max-width: 640px) { .wrap { padding: 0 18px; } }
+
+/* display type: Archivo at its widest setting, like transit signage */
+.display {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 700;
+}
+
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+  outline: 2.5px solid var(--amber-500);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 14.5px;
+  border: none;
+  cursor: pointer;
+  padding: 11px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 140ms ease, background 140ms ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-amber { background: var(--amber-500); color: #20140a; }
+.btn-amber:hover { background: var(--amber-400); }
+.btn-ghost-light { background: transparent; color: var(--white); border: 1.5px solid #ffffff55; }
+.btn-ghost-light:hover { border-color: #ffffffa0; }
+.btn-outline-dark { background: transparent; color: var(--navy-900); border: 1.5px solid var(--navy-900); }
+.btn-outline-dark:hover { background: var(--navy-900); color: var(--paper-100); }
+.btn-navy { background: var(--navy-900); color: var(--paper-100); }
+.btn-navy:hover { background: var(--navy-800); }
+.btn-lg { padding: 15px 28px; font-size: 16px; }
+
+/* ---------- sections ---------- */
+.section-pad { padding: 96px 0; }
+@media (max-width: 720px) { .section-pad { padding: 64px 0; } }
+
+.section-head { max-width: 640px; margin-bottom: 52px; }
+.section-head h2 {
+  font-size: clamp(28px, 3.6vw, 40px);
+  line-height: 1.1;
+  margin: 0 0 16px;
+  color: var(--ink-900);
+}
+.section-head p {
+  font-size: 17px;
+  color: var(--ink-600);
+  line-height: 1.6;
+  margin: 0;
+}
+.on-dark .section-head h2 { color: var(--white); }
+.on-dark .section-head p { color: #c9d6dd; }

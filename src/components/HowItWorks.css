@@ -1,0 +1,28 @@
+.metro { position: relative; padding-top: 8px; }
+.metro-line {
+  position: absolute;
+  top: 27px; left: 0; right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(90deg, var(--clay-500) 0 14px, transparent 14px 22px);
+}
+@media (max-width: 860px) { .metro-line { display: none; } }
+.metro-steps {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  position: relative;
+}
+@media (max-width: 860px) { .metro-steps { grid-template-columns: 1fr; gap: 34px; } }
+.stop {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--paper-100);
+  border: 3px solid var(--clay-500);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: var(--clay-600);
+  margin-bottom: 20px;
+  position: relative; z-index: 2;
+}
+.metro-step h3 { font-family: var(--font-ui); font-weight: 700; font-size: 18px; margin: 0 0 8px; }
+.metro-step p { font-size: 14.5px; color: var(--ink-600); line-height: 1.55; margin: 0; max-width: 32ch; }
